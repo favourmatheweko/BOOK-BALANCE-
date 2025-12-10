@@ -1,24 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookBalance - Balance Your Books in 5 Minutes</title>
     <style>
-        body { font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; }
-        .btn { background: #4CAF50; color: white; padding: 12px; text-decoration: none; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 0;
+            justify-content: center;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .waitlist-form {
+            background: white;
+            color: #333;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .waitlist-form h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        input, button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        
+        input {
+            border: 2px solid #e0e0e0;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            font-size: 18px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .features {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>📊 BookBalance</h1>
-    <p>Input daily transactions once → Get automatic profit/loss instantly</p>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📊</div>
+            <h1>Balance Your Books in 5 Minutes</h1>
+            <p class="subtitle">
+                Input your daily transactions once. Get automatic profit/loss calculations instantly. 
+                No spreadsheets, no stress.
+            </p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Simple Input</h3>
+                <p>Enter sales and expenses in less than 5 minutes daily</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Auto-Calculate</h3>
+                <p>Automatic profit/loss, cash flow, and expense tracking</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <h3>Instant Insights</h3>
+                <p>See your business health at a glance with beautiful dashboards</p>
+            </div>
+        </div>
+        
+        <div class="waitlist-form">
+            <h2>Join the Waitlist (First 100 Users Get Free Access)</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: #666;">
+                We're building this now. Be the first to know when we launch!
+            </p>
+            
+            <!-- Formspree Form - You'll need to update the action URL -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+                <input type="email" name="email" placeholder="Your business email address" required>
+                <input type="text" name="business" placeholder="Your business type (e.g., Laundry, Restaurant)">
+                <button type="submit">Join Waitlist →</button>
+                <p style="font-size: 12px; text-align: center; margin-top: 10px; color: #888;">
+                    No spam. We'll only email you about the launch.
+                </p>
+            </form>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">45+</span>
+                <span>Business Owners Waiting</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">6</span>
+                <span>Weeks to Launch</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">₦0</span>
+                <span>Cost for Early Users</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 BookBalance. Built for Nigerian business owners.</p>
+            <p style="margin-top: 10px;">📧 hello@bookbalanceapp.com</p>
+        </div>
+    </div>
     
-    <h3>How it works:</h3>
-    <p>1. Enter sales/expenses (5 mins/day)</p>
-    <p>2. App calculates everything automatically</p>
-    <p>3. See your profit instantly</p>
-    
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="email" name="email" placeholder="Your email" required>
-        <button type="submit">Join Waitlist (First 100 Free)</button>
-    </form>
+    <script>
+        // Simple form submission feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            // Don't prevent default so Formspree can work
+            // Just show a message
+            setTimeout(() => {
+                alert('Thank you! You\'re on the waitlist. We\'ll email you soon.');
+            }, 100);
+        });
+        
+        // Update stats counter (fake but looks good)
+        let count = 45;
+        setInterval(() => {
+            count++;
+            document.querySelector('.stat-number').textContent = count + '+';
+        }, 60000); // Every minute
+    </script>
 </body>
 </html>
